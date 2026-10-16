@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCNet HPC Automation"
+  short_description: "Submit, monitor, transfer, and verify SCNet HPC jobs"
+  default_prompt: "Use $scnet-hpc-automation to run and track my SCNet simulation workflow safely."
