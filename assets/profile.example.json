@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "connection": {
+    "username": "YOUR_SCNET_USERNAME",
+    "host": "YOUR_SSH_HOST",
+    "port": 22,
+    "key_path": "PATH_TO_PRIVATE_KEY_FILE",
+    "key_content_must_not_be_read": true,
+    "remote_home": "/work/home/YOUR_SCNET_USERNAME"
+  },
+  "cluster": {
+    "region_name": "YOUR_REGION",
+    "cluster_id": "YOUR_CLUSTER_ID",
+    "remote_home_prefix": "/work/home"
+  },
+  "scnet_client": {
+    "executable": "PATH_TO_SCNET_CLIENT",
+    "require_logged_in_session": true,
+    "linux_command_source": "Download > Linux fast-transfer command",
+    "never_recover_credentials_from_history": true
+  },
+  "fast_transfer": {
+    "runtime": "WSL_OR_LINUX_ENVIRONMENT",
+    "executable": "/path/to/rayfile-c",
+    "batch_source_option": "-fl",
+    "resume_supported": true
+  },
+  "project_defaults": {
+    "local_round_template": "PATH_TO_LOCAL_ROUND_XX",
+    "remote_round_template": "/remote/project/round_XX",
+    "local_result_root": "PATH_TO_LOCAL_RESULTS",
+    "case_glob": "case_*/",
+    "result_patterns": ["binout*", "d3part*"],
+    "additional_result_patterns_require_explicit_request": true
+  },
+  "authorization": {
+    "job_submission_requires_explicit_current_user_request": true,
+    "monitor_download_verify_after_authorized_submission": true,
+    "do_not_repeat_full_round_submission_when_result_is_uncertain": true
+  }
+}
